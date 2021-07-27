@@ -31,3 +31,21 @@ func TestIsSubStructure(t *testing.T) {
 	//assert.Equal(t, isSubStructure(SliceToTree([]int{0, -1, 3, 2, 0}, 1), SliceToTree([]int{0}, 1)), false)
 	assert.Equal(t, isSubStructure(SliceToTree([]int{0, 4, 2, 3, 4, 5, 6, 7, 8, 9}, 1), SliceToTree([]int{0, 4, 8, 9}, 1)), false)
 }
+
+func TestExchange(t *testing.T) {
+	assert.Equal(t, exchange([]int{1, 2, 3, 4}), []int{4, 2, 1, 3})
+}
+
+func TestSpiralOrder(t *testing.T) {
+	assert.Equal(t, spiralOrder([][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}), []int{1, 2, 3, 6, 9, 8, 7, 4, 5})
+	assert.Equal(t, spiralOrder([][]int{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}), []int{1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7})
+}
+
+func TestGetLeastNumbers(t *testing.T) {
+	//assert.Equal(t, []int{1, 2}, getLeastNumbers([]int{0, 1, 2, 1}, 1))
+	assert.Equal(t, []int{1, 2}, getLeastNumbers([]int{3, 2, 1}, 2))
+}
+
+func TestPermutation(t *testing.T) {
+	assert.Equal(t, []string{"abc", "acb", "bac", "bca", "cab", "cba"}, permutation("abc"))
+}
